@@ -109,7 +109,7 @@ export function RecruiterAIAssistant() {
                   </Button>
                 </div>
                 <div className="mt-3 flex flex-wrap gap-2">
-                  <a href="/cv-placeholder.txt" download>
+                  <a href="/sayen-vv.pdf" download>
                     <Button variant="secondary" size="sm">
                       <Download size={14} /> Download CV
                     </Button>

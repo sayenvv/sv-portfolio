@@ -13,10 +13,10 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://alex-ai-engineer-portfolio.vercel.app"),
-  title: "Alex Menon | AI Engineer Portfolio",
+  metadataBase: new URL("https://sayen-vv-portfolio.vercel.app"),
+  title: "Sayen VV | AI Engineer Portfolio",
   description:
-    "Premium AI Engineer portfolio featuring LLM systems, full-stack architecture, cloud deployments, and recruiter-focused interactive AI assistant.",
+    "AI Engineer portfolio featuring LLM systems, full-stack architecture, cloud deployments, and recruiter-focused interactive AI assistant.",
   keywords: [
     "AI Engineer",
     "Full Stack Engineer",
@@ -28,15 +28,15 @@ export const metadata: Metadata = {
     "MCP Server",
   ],
   openGraph: {
-    title: "Alex Menon | AI Engineer Portfolio",
+    title: "Sayen VV | AI Engineer Portfolio",
     description: "Production-grade AI engineering portfolio with interactive recruiter assistant.",
     type: "website",
     url: "/",
-    siteName: "Alex AI Engineer Portfolio",
+    siteName: "Sayen VV Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Alex Menon | AI Engineer Portfolio",
+    title: "Sayen VV | AI Engineer Portfolio",
     description: "AI systems, backend architecture, automation, and recruiter-ready experience.",
   },
 };

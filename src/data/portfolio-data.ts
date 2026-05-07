@@ -8,8 +8,8 @@ export const profile = {
   email: "sayen.bit01@gmail.com",
   phone: "+91 95392 88508",
   linkedin: "https://www.linkedin.com/in/sayen-vv/",
-  github: "https://github.com/sayen-v-v",
-  cvUrl: "/cv-placeholder.txt",
+  github: "https://github.com/sayenvv",
+  cvUrl: "/sayen-vv.pdf",
 };
 
 export const navLinks = [
@@ -21,7 +21,7 @@ export const navLinks = [
 ];
 
 export const aboutBio =
-  "I design and ship production-grade AI systems that turn complex business problems into scalable digital products. As an AI Engineer and Python specialist, I build Generative AI applications, LLM-integrated platforms, and robust FastAPI/Django backends using clean architecture and high engineering standards. I have led microservice-based builds, cloud deployments, and enterprise automation products including Excel and Visio workflow engines, AI-powered flowchart systems, and MCP server ecosystems. I combine product thinking, API craftsmanship, and system architecture depth to deliver reliable, maintainable solutions that hiring teams can trust in mission-critical environments.";
+  "I build production-grade AI systems and full-stack applications that solve real business problems. With experience spanning Python development, backend engineering, and AI product delivery, I have worked on Generative AI chat applications, MCP server platforms, intelligent flowchart generators, and e-commerce systems like Zainbay. I specialize in Python, FastAPI, Django, React, and LLM integrations, delivering scalable microservices and cloud-native solutions across AWS and Azure. From building internal tools like outsourcing workflow platforms to crafting customer-facing products, I bring clean architecture, reliable APIs, and a strong product-delivery mindset to every project.";
 
 export const skillCategories: SkillCategory[] = [
   {
@@ -64,6 +64,19 @@ export const skillCategories: SkillCategory[] = [
 export const experiences: ExperienceItem[] = [
   {
     role: "AI Engineer",
+    company: "Orion innovations pvt ltd",
+    period: "2025 - Present",
+    summary:
+      "Leading AI-driven product engineering initiatives with focus on Generative AI systems, platform APIs, and cloud-native deployment workflows.",
+    highlights: [
+      "Built production AI applications with LLM integrations and structured agent workflows.",
+      "Designed FastAPI microservices for high-throughput backend API delivery.",
+      "Delivered enterprise automation systems for flowchart and process intelligence.",
+      "Implemented scalable deployment pipelines across AWS and Azure environments.",
+    ],
+  },
+  {
+    role: "Associate Consultant",
     company: "Cloudium Software Pvt Ltd",
     period: "2023 - Present",
     summary:
@@ -76,13 +89,13 @@ export const experiences: ExperienceItem[] = [
     ],
   },
   {
-    role: "Full Stack Engineer",
+    role: "Associate Software Engineer",
     company: "Cloudium Software Pvt Ltd",
     period: "2022 - 2023",
     summary:
       "Developed full-stack platforms that connected intelligent backend services with modern, performant frontend interfaces.",
     highlights: [
-      "Architected React + Python modules for data-heavy internal tools.",
+      "Architected Python modules for data-heavy internal tools.",
       "Built secure REST APIs and reusable component libraries for rapid delivery.",
       "Created monitoring-friendly services aligned to microservices best practices.",
     ],
@@ -90,7 +103,7 @@ export const experiences: ExperienceItem[] = [
   {
     role: "Python Developer",
     company: "Primalcodes Technologies Pvt Ltd",
-    period: "2020 - 2022",
+    period: "2021 - 2022",
     summary:
       "Delivered backend products and automation pipelines focused on business productivity and process digitization.",
     highlights: [
@@ -108,6 +121,13 @@ export const education: EducationItem[] = [
     period: "Completed",
     details:
       "Advanced computing curriculum with strong foundations in software engineering, distributed systems, and data-centric application design.",
+  },
+  {
+    title: "Bachelor of Computer Science (BCS)",
+    institution: "University of Calicut",
+    period: "Completed",
+    details:
+      "Core computer science fundamentals including programming, algorithms, databases, and operating systems.",
   },
   {
     title: "Technical Certifications",
@@ -137,8 +157,8 @@ export const projects: ProjectItem[] = [
       "Service-oriented backend with prompt orchestration, flow graph builder, and stateless UI rendering layer.",
     challengeSolved:
       "Reduced manual process diagramming time by translating unstructured requirements into structured workflow maps.",
-    githubUrl: "https://github.com/alex-ai-engineer/ai-flowchart-generator",
-    liveUrl: "https://demo.ai-flowchart-generator.dev",
+    githubUrl: "https://github.com/sayen-v-v/ai-flowchart-generator",
+    liveUrl: "",
   },
   {
     id: "mcp-server-platform",
@@ -150,112 +170,60 @@ export const projects: ProjectItem[] = [
     architecture: "Modular microservices with event-driven communication and centralized gateway.",
     challengeSolved:
       "Unified fragmented tool execution paths into a maintainable, scalable MCP service layer.",
-    githubUrl: "https://github.com/alex-ai-engineer/mcp-server-platform",
-    liveUrl: "https://demo.mcp-platform.dev",
+    githubUrl: "https://github.com/sayen-v-v/mcp-server-platform",
+    liveUrl: "",
   },
   {
-    id: "snipbox",
-    title: "SnipBox",
-    image: "/projects/snipbox.jpg",
-    description: "Developer snippet manager with AI-assisted retrieval and categorization.",
-    features: ["Semantic search", "Tag automation", "Workspace sync", "Role access"],
-    technologies: ["Next.js", "TypeScript", "PostgreSQL", "OpenAI"],
-    architecture: "App router frontend + API layer + vector-friendly metadata indexing.",
-    challengeSolved:
-      "Improved code reuse velocity by making team knowledge discoverable through natural language search.",
-    githubUrl: "https://github.com/alex-ai-engineer/snipbox",
-    liveUrl: "https://demo.snipbox.dev",
-  },
-  {
-    id: "fastapi-microservices-platform",
-    title: "FastAPI Microservices Platform",
-    image: "/projects/fastapi-microservices.jpg",
-    description: "Production-ready microservices backbone for enterprise applications.",
-    features: ["Service registry", "Rate limiting", "JWT auth", "Tracing hooks"],
-    technologies: ["FastAPI", "Docker", "PostgreSQL", "Redis"],
-    architecture: "Containerized services behind API gateway with shared observability and CI/CD.",
-    challengeSolved:
-      "Enabled independent team scaling and faster releases via service isolation and standardized patterns.",
-    githubUrl: "https://github.com/alex-ai-engineer/fastapi-microservices",
-    liveUrl: "https://demo.fastapi-microservices.dev",
-  },
-  {
-    id: "excel-flowchart-ai",
-    title: "Excel to Flowchart AI System",
-    image: "/projects/excel-flowchart.jpg",
-    description: "Converts structured spreadsheet logic into intelligent flow diagrams.",
-    features: ["Sheet parser", "Rule detection", "Flow engine", "Bulk processing"],
-    technologies: ["Python", "Pandas", "FastAPI", "React"],
-    architecture: "Batch ingestion pipeline with mapping engine and async diagram renderer.",
-    challengeSolved:
-      "Transformed legacy spreadsheet operations into visual, auditable process assets.",
-    githubUrl: "https://github.com/alex-ai-engineer/excel-flowchart-ai",
-    liveUrl: "https://demo.excel-flowchart-ai.dev",
-  },
-  {
-    id: "visio-automation",
-    title: "Visio Diagram Automation",
-    image: "/projects/visio-automation.jpg",
-    description: "Automates Visio diagram generation from business and technical rules.",
-    features: ["Template automation", "Dynamic connector logic", "Versioning", "Export suite"],
-    technologies: ["Python", "COM Automation", "FastAPI"],
-    architecture: "Automation worker pool connected to API layer and versioned artifact storage.",
-    challengeSolved:
-      "Eliminated repetitive manual Visio operations while improving consistency and delivery speed.",
-    githubUrl: "https://github.com/alex-ai-engineer/visio-automation",
-    liveUrl: "https://demo.visio-automation.dev",
-  },
-  {
-    id: "genai-chat-apps",
-    title: "Generative AI Chat Applications",
+    id: "genai-chat-app",
+    title: "Generative AI Chat Application",
     image: "/projects/genai-chat.jpg",
-    description: "Domain-tuned conversational applications for enterprise support workflows.",
+    description: "Domain-tuned conversational application for enterprise support workflows.",
     features: ["Context memory", "Prompt guardrails", "Knowledge grounding", "Analytics"],
     technologies: ["OpenAI", "Python", "Next.js", "Redis"],
     architecture: "Hybrid chat orchestrator with retrieval-ready context and audit logging.",
     challengeSolved:
       "Delivered safer, more accurate assistant behavior through controllable context and response policies.",
-    githubUrl: "https://github.com/alex-ai-engineer/genai-chat-apps",
-    liveUrl: "https://demo.genai-chat-apps.dev",
+    githubUrl: "https://github.com/sayen-v-v/genai-chat-app",
+    liveUrl: "",
   },
   {
     id: "outsourcing-application",
     title: "Outsourcing Application",
     image: "/projects/outsourcing-app.jpg",
-    description: "Workflow platform for outsourcing operations and delivery governance.",
+    description: "Internal self-service application for outsourcing operations and delivery governance.",
     features: ["Task pipeline", "SLA dashboard", "Role-based access", "Automated notifications"],
     technologies: ["Django", "React", "PostgreSQL"],
     architecture: "Monolith-to-modular architecture with asynchronous worker services for heavy jobs.",
     challengeSolved:
       "Improved visibility and execution quality across distributed outsourcing teams.",
-    githubUrl: "https://github.com/alex-ai-engineer/outsourcing-application",
-    liveUrl: "https://demo.outsourcing-application.dev",
+    githubUrl: "https://github.com/sayen-v-v/outsourcing-application",
+    liveUrl: "",
   },
   {
-    id: "company-profile-dashboard",
-    title: "Company Profile Dashboard",
-    image: "/projects/company-profile.jpg",
-    description: "Interactive dashboard for company intelligence, KPIs, and strategic reporting.",
-    features: ["KPI widgets", "Exportable reports", "Comparative trends", "Secure access"],
-    technologies: ["Next.js", "TypeScript", "MongoDB"],
-    architecture: "SSR-first dashboard with API aggregation and caching strategy for snappy UX.",
+    id: "liyak",
+    title: "Liyak",
+    image: "/projects/liyak.jpg",
+    description: "Full-stack web application built for streamlined business operations.",
+    features: ["User management", "Dashboard analytics", "Responsive UI", "API integrations"],
+    technologies: ["Python", "Django", "React", "PostgreSQL"],
+    architecture: "Django backend with React frontend, REST API layer, and role-based access control.",
     challengeSolved:
-      "Consolidated fragmented business metrics into a single decision-ready interface.",
-    githubUrl: "https://github.com/alex-ai-engineer/company-profile-dashboard",
-    liveUrl: "https://demo.company-profile-dashboard.dev",
+      "Consolidated multiple manual workflows into a single unified digital platform.",
+    githubUrl: "https://github.com/sayen-v-v/liyak",
+    liveUrl: "",
   },
   {
-    id: "svg-shape-detection-engine",
-    title: "SVG Shape Detection Engine",
-    image: "/projects/svg-shape-detection.jpg",
-    description: "Parses and detects SVG shapes for automation and diagram intelligence tasks.",
-    features: ["Path detection", "Geometry analysis", "Batch conversion", "JSON output"],
-    technologies: ["Python", "FastAPI", "TypeScript"],
-    architecture: "Compute pipeline with geometry parser core and API-based processing endpoints.",
+    id: "zainbay-ecommerce",
+    title: "Zainbay E-Commerce",
+    image: "/projects/zainbay.jpg",
+    description: "Full-featured e-commerce platform with product catalog, cart, and payment integration.",
+    features: ["Product catalog", "Shopping cart", "Payment gateway", "Order management"],
+    technologies: ["Python", "Django", "React", "PostgreSQL"],
+    architecture: "Modular e-commerce backend with secure payment processing and responsive storefront.",
     challengeSolved:
-      "Made complex diagram assets machine-readable for downstream AI and automation workflows.",
-    githubUrl: "https://github.com/alex-ai-engineer/svg-shape-detection-engine",
-    liveUrl: "https://demo.svg-shape-detection.dev",
+      "Delivered a scalable online shopping experience with reliable order and inventory management.",
+    githubUrl: "https://github.com/sayen-v-v/zainbay-ecommerce",
+    liveUrl: "",
   },
 ];
 
@@ -267,7 +235,7 @@ export const salaryExpectations = {
 };
 
 export const availabilityInfo = {
-  currentLocation: "Bengaluru, Karnataka, India",
+  currentLocation: "Kochi, Kerala, India",
   relocation: "Open to relocation for strategic roles",
   remoteOpportunities: "Open globally",
   timezone: "IST with overlap for EU/US collaboration windows",
