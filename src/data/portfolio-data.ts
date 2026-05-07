@@ -50,11 +50,6 @@ export const skillCategories: SkillCategory[] = [
     skills: ["PostgreSQL", "MongoDB", "Redis"],
   },
   {
-    title: "Automation",
-    icon: "Workflow",
-    skills: ["Excel Automation", "Visio Automation", "Workflow Engines"],
-  },
-  {
     title: "Tools",
     icon: "Wrench",
     skills: ["Git", "Postman", "Linux", "Architecture Design"],
@@ -251,11 +246,11 @@ export const recruiterPrompts = [
 
 export const recruiterFaq: Record<string, string> = {
   skills:
-    "I specialize in Python, FastAPI, Django, React, Next.js, LLM integrations, MCP server development, and cloud-native engineering across AWS and Azure.",
+    "I specialize in Python, FastAPI, Django, LLM integrations, MCP server development, and cloud-native engineering across AWS and Azure.",
   projects:
     "My key projects include AI Flowchart Generator, MCP Server Platform, FastAPI Microservices Platform, and enterprise automation systems for Excel and Visio workflows.",
   experience:
-    "I have worked as Python Developer, Full Stack Engineer, and AI Engineer across Primalcodes Technologies and Cloudium Software, with strong focus on backend APIs, GenAI apps, and scalable microservices.",
+    "I have worked as Python Developer at Primalcodes Technologies, Associate Software Engineer and Associate Consultant at Cloudium Software, and currently as AI Engineer at Orion Innovations, with strong focus on backend APIs, GenAI apps, and scalable microservices.",
   education:
     "I completed MCA from IGNOU and continue professional upskilling through technical certifications in AI engineering, cloud deployment, and architecture.",
   salary:
@@ -263,5 +258,5 @@ export const recruiterFaq: Record<string, string> = {
   availability:
     "I am available for remote, hybrid, or onsite roles and can align start date from immediate to a short transition period.",
   contact:
-    "You can reach me via email at alex.ai.engineer@example.com, phone +91 98765 43210, or LinkedIn for a faster conversation.",
+    "You can reach me via email at sayen.bit01@gmail.com, phone +91 95392 88508, or LinkedIn for a faster conversation.",
 };
