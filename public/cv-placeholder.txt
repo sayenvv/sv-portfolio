@@ -1,0 +1,2 @@
+This is a placeholder CV file.
+Replace public/cv-placeholder.txt with your latest resume PDF and update cvUrl in src/data/portfolio-data.ts if needed.
