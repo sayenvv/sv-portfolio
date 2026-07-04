@@ -144,7 +144,7 @@ export const education: EducationItem[] = [
   {
     title: "Master of Computer Applications (MCA)",
     institution: "IGNOU",
-    period: "Completed",
+    period: "Ongoing",
     details:
       "Advanced computing curriculum with strong foundations in software engineering, distributed systems, and data-centric application design.",
   },
@@ -256,7 +256,7 @@ export const projects: ProjectItem[] = [
 export const salaryExpectations = {
   expectedSalary: "Competitive, aligned with role scope and impact",
   preferredEmploymentType: "Full-time (Senior/Lead AI Engineering roles)",
-  availability: "Immediate to 30 days notice",
+  availability: "90 days notice",
   workPreference: "Remote / Hybrid / Onsite",
 };
 
