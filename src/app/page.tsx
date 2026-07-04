@@ -21,11 +21,8 @@ const EducationSection = dynamic(() =>
 const ProjectsSection = dynamic(() =>
   import("@/components/sections/projects-section").then((module) => module.ProjectsSection),
 );
-const SalarySection = dynamic(() =>
-  import("@/components/sections/salary-section").then((module) => module.SalarySection),
-);
-const AvailabilitySection = dynamic(() =>
-  import("@/components/sections/availability-section").then((module) => module.AvailabilitySection),
+const EngagementSection = dynamic(() =>
+  import("@/components/sections/engagement-section").then((module) => module.EngagementSection),
 );
 const ContactSection = dynamic(() =>
   import("@/components/sections/contact-section").then((module) => module.ContactSection),
@@ -44,7 +41,6 @@ export default function Home() {
   return (
     <SiteShell>
       <main className="relative overflow-x-clip">
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.22),transparent_48%),radial-gradient(circle_at_bottom_left,rgba(16,185,129,0.14),transparent_42%),linear-gradient(180deg,#020617,#020617)]" />
         <Suspense fallback={<SectionSkeleton />}>
           <HeroSection />
           <AboutSection />
@@ -52,8 +48,7 @@ export default function Home() {
           <ExperienceSection />
           <EducationSection />
           <ProjectsSection />
-          <SalarySection />
-          <AvailabilitySection />
+          <EngagementSection />
           <ContactSection />
           <FooterSection />
           <RecruiterAIAssistant />

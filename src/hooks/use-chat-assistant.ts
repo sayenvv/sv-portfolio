@@ -9,7 +9,7 @@ const initialMessage: ChatMessage = {
   id: "intro",
   role: "assistant",
   content:
-    "Hello recruiter. I am Alex's AI assistant. I can share skills, projects, experience, education, salary expectations, availability, and contact details.",
+    "Hi there! I'm Sayen's AI assistant. Ask me about his skills, projects, experience, education, salary expectations, availability, or contact details.",
   createdAt: Date.now(),
 };
 

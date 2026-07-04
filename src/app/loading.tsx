@@ -1,9 +1,9 @@
 export default function Loading() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-slate-950">
+    <main className="flex min-h-screen items-center justify-center bg-[#0a0a0c]">
       <div className="text-center">
-        <div className="mx-auto h-14 w-14 animate-spin rounded-full border-2 border-cyan-400/30 border-t-cyan-300" />
-        <p className="mt-4 text-sm uppercase tracking-[0.3em] text-cyan-300">Loading Portfolio</p>
+        <div className="mx-auto h-12 w-12 animate-spin rounded-full border-2 border-white/10 border-t-[#e2b96f]" />
+        <p className="mt-5 font-mono text-[11px] uppercase tracking-[0.35em] text-[#9a9aa3]">Loading</p>
       </div>
     </main>
   );

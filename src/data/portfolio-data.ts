@@ -20,6 +20,37 @@ export const navLinks = [
   { label: "Contact", href: "#contact" },
 ];
 
+export const heroStats = [
+  { value: "4+", label: "Years of experience" },
+  { value: "6", label: "Production projects" },
+  { value: "3", label: "Companies served" },
+  { value: "2", label: "Cloud platforms" },
+];
+
+export const techMarquee = [
+  "Python",
+  "FastAPI",
+  "Django",
+  "React",
+  "Next.js",
+  "TypeScript",
+  "OpenAI",
+  "LLM Systems",
+  "MCP Servers",
+  "PostgreSQL",
+  "Redis",
+  "Docker",
+  "AWS",
+  "Azure",
+];
+
+export const aboutFacts = [
+  { label: "Based in", value: "Kochi, India" },
+  { label: "Current role", value: "AI Engineer at Orion Innovations" },
+  { label: "Focus", value: "LLM systems & platform APIs" },
+  { label: "Working style", value: "Remote-first, global overlap" },
+];
+
 export const aboutBio =
   "I build production-grade AI systems and full-stack applications that solve real business problems. With experience spanning Python development, backend engineering, and AI product delivery, I have worked on Generative AI chat applications, MCP server platforms, intelligent flowchart generators, and e-commerce systems like Zainbay. I specialize in Python, FastAPI, Django, React, and LLM integrations, delivering scalable microservices and cloud-native solutions across AWS and Azure. From building internal tools like outsourcing workflow platforms to crafting customer-facing products, I bring clean architecture, reliable APIs, and a strong product-delivery mindset to every project.";
 

@@ -4,22 +4,23 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/60 disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-sm font-medium tracking-tight transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
         default:
-          "bg-cyan-400 text-slate-950 shadow-[0_0_30px_-8px_rgba(34,211,238,0.7)] hover:bg-cyan-300",
+          "bg-foreground text-background hover:bg-accent hover:text-[#1a1206] hover:shadow-[0_0_40px_-10px_rgba(226,185,111,0.55)]",
         secondary:
-          "border border-white/20 bg-white/10 text-slate-100 backdrop-blur-xl hover:bg-white/20",
-        ghost: "text-slate-200 hover:bg-white/10",
-        outline: "border border-cyan-400/40 text-cyan-200 hover:bg-cyan-400/10",
+          "border border-white/12 bg-white/[0.04] text-foreground backdrop-blur-xl hover:border-white/25 hover:bg-white/[0.08]",
+        ghost: "text-muted hover:bg-white/[0.06] hover:text-foreground",
+        outline:
+          "border border-accent/35 text-accent hover:border-accent/60 hover:bg-accent-soft",
       },
       size: {
-        default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
-        icon: "h-10 w-10",
+        default: "h-11 px-6",
+        sm: "h-9 px-4 text-[13px]",
+        lg: "h-12 px-8",
+        icon: "h-11 w-11",
       },
     },
     defaultVariants: {

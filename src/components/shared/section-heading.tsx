@@ -13,15 +13,20 @@ export function SectionHeading({
 }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 12 }}
+      initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.5 }}
-      className="mb-10 max-w-3xl"
+      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      className="mb-14 max-w-3xl"
     >
-      <p className="mb-2 text-xs uppercase tracking-[0.35em] text-cyan-300">{eyebrow}</p>
-      <h2 className="text-3xl font-semibold text-white md:text-4xl">{title}</h2>
-      {description ? <p className="mt-4 text-slate-300">{description}</p> : null}
+      <div className="mb-4 flex items-center gap-3">
+        <span className="h-px w-8 bg-accent/60" />
+        <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">{eyebrow}</p>
+      </div>
+      <h2 className="font-serif text-3xl leading-[1.15] tracking-tight text-foreground md:text-[2.75rem]">
+        {title}
+      </h2>
+      {description ? <p className="mt-5 text-base leading-relaxed text-muted">{description}</p> : null}
     </motion.div>
   );
 }

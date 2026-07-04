@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono, Space_Grotesk } from "next/font/google";
+import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+});
+
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
+  subsets: ["latin"],
+  axes: ["opsz", "SOFT", "WONK"],
 });
 
 const jetbrainsMono = JetBrains_Mono({
@@ -14,9 +20,9 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sayen-vv-portfolio.vercel.app"),
-  title: "Sayen VV | AI Engineer Portfolio",
+  title: "Sayen VV — AI Engineer",
   description:
-    "AI Engineer portfolio featuring LLM systems, full-stack architecture, cloud deployments, and recruiter-focused interactive AI assistant.",
+    "AI Engineer building production LLM systems, full-stack platforms, and cloud-native architecture. Based in Kochi, working globally.",
   keywords: [
     "AI Engineer",
     "Full Stack Engineer",
@@ -28,16 +34,16 @@ export const metadata: Metadata = {
     "MCP Server",
   ],
   openGraph: {
-    title: "Sayen VV | AI Engineer Portfolio",
-    description: "Production-grade AI engineering portfolio with interactive recruiter assistant.",
+    title: "Sayen VV — AI Engineer",
+    description: "Production LLM systems, full-stack platforms, and cloud-native architecture.",
     type: "website",
     url: "/",
-    siteName: "Sayen VV Portfolio",
+    siteName: "Sayen VV",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sayen VV | AI Engineer Portfolio",
-    description: "AI systems, backend architecture, automation, and recruiter-ready experience.",
+    title: "Sayen VV — AI Engineer",
+    description: "Production LLM systems, full-stack platforms, and cloud-native architecture.",
   },
 };
 
@@ -47,7 +53,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} h-full antialiased`}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${fraunces.variable} ${jetbrainsMono.variable} h-full antialiased`}
+    >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

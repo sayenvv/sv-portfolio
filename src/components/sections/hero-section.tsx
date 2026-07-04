@@ -1,74 +1,115 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Download, Mail } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Download } from "lucide-react";
 
-import { ParticlesBg } from "@/components/effects/particles-bg";
 import { Button } from "@/components/ui/button";
-import { profile } from "@/data/portfolio-data";
-import { useTypewriter } from "@/hooks/use-typewriter";
+import { heroStats, profile, techMarquee } from "@/data/portfolio-data";
+
+const ease = [0.22, 1, 0.36, 1] as const;
 
 export function HeroSection() {
-  const typed = useTypewriter(["AI Engineer", "Full Stack Engineer", "Python Developer"]);
-
   return (
-    <section id="home" className="relative overflow-hidden pt-16 md:pt-28">
-      <ParticlesBg />
-      <div className="mx-auto grid w-full max-w-6xl gap-10 px-5 pb-20 md:grid-cols-[1.15fr_0.85fr] md:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="relative z-10"
-        >
-          <p className="mb-4 text-xs uppercase tracking-[0.35em] text-cyan-300">Futuristic Portfolio</p>
-          <h1 className="text-4xl font-bold leading-tight text-white md:text-6xl">
-            {profile.name}
-            <span className="block bg-gradient-to-r from-cyan-300 via-sky-300 to-emerald-300 bg-clip-text text-transparent">
-              {typed}
-              <span className="animate-pulse">|</span>
-            </span>
-          </h1>
-          <p className="mt-6 max-w-xl text-slate-300 md:text-lg">
-            Building production-grade AI products, LLM systems, and scalable cloud-native architectures for modern businesses.
-          </p>
+    <section id="home" className="relative flex min-h-screen flex-col overflow-hidden">
+      {/* Backdrop */}
+      <div className="noise pointer-events-none absolute inset-0" aria-hidden="true">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[size:72px_72px] [mask-image:radial-gradient(ellipse_70%_60%_at_50%_35%,black,transparent)]" />
+        <div className="absolute left-1/2 top-[-20%] h-[560px] w-[820px] -translate-x-1/2 rounded-full bg-accent/[0.07] blur-[130px]" />
+      </div>
 
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a href={profile.cvUrl} download>
-              <Button size="lg">
-                <Download size={16} /> Download CV
-              </Button>
-            </a>
-            <a href="#contact">
-              <Button variant="secondary" size="lg">
-                <Mail size={16} /> Contact Me
-              </Button>
-            </a>
-            <a href="#projects">
-              <Button variant="outline" size="lg">
-                <ArrowRight size={16} /> View Projects
-              </Button>
-            </a>
-          </div>
+      <div className="relative mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center px-5 pt-32 md:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease }}
+          className="inline-flex"
+        >
+          <span className="inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.04] py-1.5 pl-3 pr-4 font-mono text-[11px] uppercase tracking-[0.2em] text-muted">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+            </span>
+            Available for senior AI roles
+          </span>
+        </motion.div>
+
+        <motion.h1
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1, ease }}
+          className="mt-8 max-w-4xl font-serif text-[2.75rem] leading-[1.06] tracking-tight text-foreground md:text-7xl"
+        >
+          AI engineer building
+          <span className="text-accent italic"> intelligent systems </span>
+          that make it to production.
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.22, ease }}
+          className="mt-7 max-w-xl text-base leading-relaxed text-muted md:text-lg"
+        >
+          I&apos;m {profile.name} — I design and ship LLM applications, platform APIs, and
+          cloud-native architecture from {profile.location}, collaborating with teams worldwide.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.34, ease }}
+          className="mt-10 flex flex-wrap items-center gap-3"
+        >
+          <a href={profile.cvUrl} download>
+            <Button size="lg">
+              <Download size={16} /> Download CV
+            </Button>
+          </a>
+          <a href="#projects">
+            <Button variant="secondary" size="lg">
+              View projects <ArrowUpRight size={16} />
+            </Button>
+          </a>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-          className="relative z-10"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="mt-20 grid grid-cols-2 gap-y-8 border-t border-white/[0.08] pt-8 pb-16 md:grid-cols-4"
         >
-          <div className="relative mx-auto h-[320px] w-[320px] rounded-[2.5rem] border border-cyan-300/25 bg-gradient-to-br from-cyan-500/25 via-sky-500/10 to-emerald-500/25 p-3 shadow-[0_0_90px_-35px_rgba(56,189,248,0.9)] backdrop-blur-xl">
-            <div className="flex h-full w-full items-center justify-center rounded-[2rem] border border-white/10 bg-slate-950/80">
-              <div className="text-center">
-                <p className="text-sm uppercase tracking-[0.25em] text-slate-400">Profile</p>
-                <p className="mt-2 text-6xl font-semibold text-cyan-300">AK</p>
-                <p className="mt-2 text-sm text-slate-300">Professional image placeholder</p>
-              </div>
+          {heroStats.map((stat) => (
+            <div key={stat.label}>
+              <p className="font-serif text-3xl text-foreground md:text-4xl">{stat.value}</p>
+              <p className="mt-1.5 text-[13px] text-muted">{stat.label}</p>
             </div>
-          </div>
+          ))}
         </motion.div>
       </div>
+
+      {/* Tech marquee */}
+      <div className="relative border-y border-white/[0.06] bg-white/[0.015] py-5">
+        <div className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">
+          <div className="animate-marquee flex shrink-0 items-center">
+            {[...techMarquee, ...techMarquee].map((tech, idx) => (
+              <span key={`${tech}-${idx}`} className="flex items-center">
+                <span className="px-6 font-mono text-[12px] uppercase tracking-[0.22em] text-muted/80">
+                  {tech}
+                </span>
+                <span className="h-1 w-1 rounded-full bg-accent/50" />
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <a
+        href="#about"
+        aria-label="Scroll to about section"
+        className="absolute bottom-28 right-8 hidden text-muted/60 hover:text-accent lg:block"
+      >
+        <ArrowDown size={18} className="animate-bounce" />
+      </a>
     </section>
   );
 }

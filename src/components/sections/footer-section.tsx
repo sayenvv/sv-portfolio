@@ -1,48 +1,66 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { BriefcaseBusiness, GitFork, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 
+import { GitHubIcon, LinkedInIcon } from "@/components/shared/brand-icons";
 import { navLinks, profile } from "@/data/portfolio-data";
 
 export function FooterSection() {
   return (
-    <motion.footer
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      className="mt-16 border-t border-white/10 bg-slate-950/60"
-    >
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-5 py-8 md:px-8">
-        <div className="flex flex-wrap items-center justify-between gap-4">
-          <p className="text-sm text-slate-300">Built with Next.js, React, Tailwind CSS, Framer Motion, and shadcn-style UI.</p>
-          <div className="flex items-center gap-3 text-slate-300">
-            <a className="hover:text-cyan-200" href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub">
-              <GitFork size={16} />
+    <footer className="border-t border-white/[0.06]">
+      <div className="mx-auto w-full max-w-6xl px-5 py-12 md:px-8">
+        <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+          <a href="#home" className="font-serif text-2xl tracking-tight text-foreground">
+            Sayen<span className="text-accent">.</span>
+          </a>
+          <nav className="flex flex-wrap gap-x-7 gap-y-3">
+            {navLinks.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted hover:text-foreground"
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
+          <div className="flex items-center gap-3">
+            <a
+              className="rounded-full border border-white/10 p-2.5 text-muted hover:border-accent/40 hover:text-accent"
+              href={profile.github}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+            >
+              <GitHubIcon size={15} />
             </a>
             <a
-              className="hover:text-cyan-200"
+              className="rounded-full border border-white/10 p-2.5 text-muted hover:border-accent/40 hover:text-accent"
               href={profile.linkedin}
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
             >
-              <BriefcaseBusiness size={16} />
+              <LinkedInIcon size={15} />
             </a>
-            <a className="hover:text-cyan-200" href={`mailto:${profile.email}`} aria-label="Email">
-              <Mail size={16} />
+            <a
+              className="rounded-full border border-white/10 p-2.5 text-muted hover:border-accent/40 hover:text-accent"
+              href={`mailto:${profile.email}`}
+              aria-label="Email"
+            >
+              <Mail size={15} />
             </a>
           </div>
         </div>
-        <div className="flex flex-wrap gap-4 text-sm text-slate-400">
-          {navLinks.map((item) => (
-            <a key={item.href} href={item.href} className="hover:text-cyan-200">
-              {item.label}
-            </a>
-          ))}
+        <div className="mt-10 flex flex-col gap-2 border-t border-white/[0.06] pt-6 md:flex-row md:items-center md:justify-between">
+          <p className="text-xs text-muted/70">
+            © {new Date().getFullYear()} {profile.name}. All rights reserved.
+          </p>
+          <p className="text-xs text-muted/50">
+            Kochi, India — {profile.timezone}
+          </p>
         </div>
-        <p className="text-xs text-slate-500">© {new Date().getFullYear()} {profile.name}. All rights reserved.</p>
       </div>
-    </motion.footer>
+    </footer>
   );
 }
